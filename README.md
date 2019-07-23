@@ -1,7 +1,7 @@
     # CleanLeetCodeByJava
     
-    001.Two Sum
-    
+        001.Two Sum
+
 ```
     //本人解决方法
     class Solution {
@@ -18,7 +18,7 @@
             return null;
         }
     }
-    ```
+    
     //leetcode用时最短的解决方法
     class Solution {
         public int[] twoSum(int[] nums, int target) {
@@ -36,8 +36,7 @@
 
         }
     }
-    ```
-    ```
+    
     //leetcode耗费内存最少的解决方法
     class Solution {
         public int[] twoSum(int[] nums, int target) {
@@ -57,5 +56,5 @@
             return new int[5];
         }
     }
-    ```
+```
 
