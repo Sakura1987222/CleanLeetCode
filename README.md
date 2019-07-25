@@ -58,3 +58,38 @@
     }
 ```
 
+		2. Add Two Numbers
+```
+ /**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    	//指向头(废结点)
+        ListNode resultListNode = new ListNode(0);
+        //移动指针
+        ListNode curr = resultListNode;
+        //存放进位(十位）
+        int ten = 0;
+        //ten != 0 :进位也要生成一个结点
+        while(l1 != null || l2 != null || ten != 0) {
+            ten += (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val);
+            //存个位
+            curr.next = new ListNode(ten % 10);
+            curr = curr.next;
+            //存十位
+            ten /= 10;
+            l2 = l2 == null ? l2 : l2.next;
+            l1 = l1 == null ? l1 : l1.next;;
+        }
+        //去掉废结点
+        return resultListNode.next;
+    }
+}
+```
+
